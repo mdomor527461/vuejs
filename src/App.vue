@@ -70,6 +70,8 @@
 
     </div>
 
+   <ComponentA />
+
 </template>
 <script setup>
 import Navbar from './components/Navbar.vue'
@@ -77,12 +79,11 @@ import Form from './components/Form.vue'
 import Computed from './components/Computed.vue'
 import Watchers from './components/Watchers.vue'
 import ProductCard from './components/ProductCard.vue'
+import ComponentA from './components/ComponentA.vue'
 import product1 from './assets/product-images/product1.png'
 import product2 from './assets/product-images/product2.png'
 import product3 from './assets/product-images/product3.png'
-
-
-
+import {provide} from 'vue'
 
 import { ref } from 'vue'
 
@@ -101,4 +102,6 @@ function incrementCounter(){
 function printMessage(event){
   console.log(event.target.value);
 }
+
+provide('userName', 'Omor Faruk');
 </script>
