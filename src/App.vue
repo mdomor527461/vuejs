@@ -60,6 +60,8 @@
 
   <!-- Example of Provide and Inject -->
   <ComponentA />
+
+
   <!-- Example of Customer event and emits -->
 
   <div class="flex items-center justify-center mt-6 mb-6">
@@ -75,7 +77,7 @@
 
 
 
- <!-- Slot example -->
+  <!-- Slot example -->
   <Slot>
     <template #slot1>
       <h1>Slot 1 Content</h1>
@@ -93,9 +95,25 @@
 
   <!-- Example of dynamic components  -->
 
-  
+  <div>
+    <div class="flex justify-center items-center">
+      <button class="bg-green-500 hover:bg-green-600  px-4 py-1 text-white shadow-md cursor-pointer" @click="currentTab = Tab1">Tab 1</button>
+      <button class="bg-red-500 hover:bg-red-600  px-4 py-1 text-white shadow-md cursor-pointer" @click="currentTab = Tab2">Tab 2</button>
+      <button class="bg-blue-500 hover:bg-blue-600  px-4 py-1 text-white shadow-md cursor-pointer" @click="currentTab = Tab3">Tab 3</button>
+    </div>
+
+    <KeepAlive>
+
+      <component :is="currentTab"/>
+    </KeepAlive>
+
+  </div>
+
+
+
 
 </template>
+
 <script setup>
 import Navbar from './components/Navbar.vue'
 import Form from './components/Form.vue'
@@ -113,9 +131,11 @@ import product1 from './assets/product-images/product1.png'
 import product2 from './assets/product-images/product2.png'
 import product3 from './assets/product-images/product3.png'
 import { provide } from 'vue'
-
 import { ref } from 'vue'
 
+import Tab1 from './components/Tab1.vue'
+import Tab2 from './components/Tab2.vue'
+import Tab3 from './components/Tab3.vue'
 
 
 const message = 'Hello, Vue!'
@@ -138,4 +158,6 @@ provide('userName', 'Omor Faruk');
 const showPopup = ref(false);
 //v-model and component problem
 const inputValue = ref('');
+const currentTab = ref(Tab1);
+
 </script>

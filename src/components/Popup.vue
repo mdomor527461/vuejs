@@ -7,7 +7,7 @@
             </div>
             <p class="text-sm text-gray-500 mb-6">A short message goes here.</p>
             <div class="flex justify-end gap-2">
-                <button class="px-4 py-2 text-sm rounded-lg border hover:bg-gray-50">Cancel</button>
+                <button class="px-4 py-2 text-sm rounded-lg border hover:bg-gray-50 cursor-pointer" @click="emit('close')">Cancel</button>
                 <button class="px-4 py-2 text-sm rounded-lg bg-gray-900 text-white hover:bg-gray-800" @click="emit('close')">Close</button>
             </div>
         </div>
