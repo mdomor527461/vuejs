@@ -111,7 +111,12 @@
 
   <!-- Example of HTTP GET request -->
   <GetRequest />
+  <!-- Example of HTTP GET request -->
+  <PostRequest/>
 
+  <!-- Example of lifecycle hooks -->
+
+ <LifeCycle/>
 
 
 
@@ -140,6 +145,8 @@ import { ref , shallowRef } from 'vue'
 import Tab1 from './components/Tab1.vue'
 import Tab2 from './components/Tab2.vue'
 import Tab3 from './components/Tab3.vue'
+import PostRequest from './components/PostRequest.vue'
+import LifeCycle from './components/LifeCycle.vue'
 
 
 const message = 'Hello, Vue!'
