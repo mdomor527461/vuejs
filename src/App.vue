@@ -109,6 +109,9 @@
 
   </div>
 
+  <!-- Example of HTTP GET request -->
+  <GetRequest />
+
 
 
 
@@ -125,13 +128,14 @@ import Popup from './components/Popup.vue'
 import Input from './components/Input.vue'
 import Input2 from './components/Input2.vue'
 import Slot from './components/Slot.vue'
+import GetRequest from './components/GetRequest.vue'
 
 
 import product1 from './assets/product-images/product1.png'
 import product2 from './assets/product-images/product2.png'
 import product3 from './assets/product-images/product3.png'
 import { provide } from 'vue'
-import { ref } from 'vue'
+import { ref , shallowRef } from 'vue'
 
 import Tab1 from './components/Tab1.vue'
 import Tab2 from './components/Tab2.vue'
@@ -158,6 +162,6 @@ provide('userName', 'Omor Faruk');
 const showPopup = ref(false);
 //v-model and component problem
 const inputValue = ref('');
-const currentTab = ref(Tab1);
+const currentTab = shallowRef(Tab1);
 
 </script>
